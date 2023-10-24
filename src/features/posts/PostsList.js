@@ -11,8 +11,6 @@ import ReactionButtons from "./ReactionButtons";
 
 
 export const PostsList = () => {
-
-
     const posts = useSelector(selectAllPost)
 
     const orderedPosts = posts.slice().sort((a,b)=>b.date.localeCompare(a.date))
