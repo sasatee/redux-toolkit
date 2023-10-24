@@ -4,10 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//
+import { store } from './app/store';
+import {Provider} from "react-redux";
+//Provider => provide the global state to our react app 
+
+
+//
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+  {/* our global state will be availabe to our store */}
+
+    </Provider>
+    
   </React.StrictMode>
 );
 
